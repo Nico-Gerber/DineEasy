@@ -23,7 +23,7 @@ assignment2/
 
 GITHUB REPOSITORY
 -----------------
-
+https://github.com/Nico-Gerber/DineEasy
 
 JAVASCRIPT VALIDATION LOGIC
 ----------------------------
