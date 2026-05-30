@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Web development">
+    <meta name="keywords" content="HTML, web development, forms, input elements, COS10005, Nico Gerber">
+    <meta name="author" content="Nico Gerber">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nico Gerber Homepage</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+
+    <header>
+
+
+
+
+
+        <!-- NAV -->
+
+        <nav id="main-nav">
+
+            <a href="index.html" id="logo-item">
+                <img id="logo" src="images/logo.png" alt="DineEasy logo">
+            </a>
+
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="current-page" href="restaurants.html">Restaurants</a></li>
+                <li><a href="recommend.html">Recommendation</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+    <main>
+
+
+
+        <!-- LEGEND -->
+
+        <section id="Restaurants-legend">
+
+            <div id="legend">
+                <div class="legendtext">
+                    <h1>Restaurants</h1>
+
+                    <p id="welcome-text">Discover Melbourne's most loved restaurants, from elegant fine dining
+                        experiences to hidden local
+                        favourites. Browse curated venues, explore unique cuisines, and reserve your table in just a few
+                        clicks with DineEasy.
+                    </p>
+
+                </div>
+
+                <div class="bottom-left">
+                    source: https://www.melbourne.crowneplaza.com/explore/
+                </div>
+
+                <img src="images/legend.jpg" id="legend-image" alt="Melbourne">
+            </div>
+
+        </section>
+
+        <br><br>
+
+
+        <!-- FILTERS -->
+
+
+        <div class="filter-options">
+
+
+            <input type="text" id="search" name="search" placeholder="Search by name" />
+
+
+            <select id="cuisine-list" name="cuisine-list">
+                <option value="all">All Cuisines</option>
+                <div id="cuisine-dropdown"></div>
+            </select>
+
+        </div>
+
+
+
+
+        <!-- RESTAURANTS -->
+
+
+        <div id="restaurant-list-container">
+            <div id="restaurant-list"></div>
+        </div>
+
+
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer id="main-footer">
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 DineEasy. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/script.js"></script>
+
+
+
+
+</body>
+
+</html>

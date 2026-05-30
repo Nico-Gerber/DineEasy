@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Web development">
+    <meta name="keywords" content="HTML, web development, forms, input elements, COS10005, Nico Gerber">
+    <meta name="author" content="Nico Gerber">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nico Gerber Homepage</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+    <!-- NAV -->
+
+    <header>
+        <nav id="main-nav">
+
+            <a href="index.html" id="logo-item">
+                <img id="logo" src="images/logo.png" alt="DineEasy logo">
+            </a>
+
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="recommend.html">Recommendation</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a class="current-page" href="reservation.html">Reservation</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+
+
+
+
+        <br>
+        <br>
+
+        <!-- FORM -->
+
+
+        <form id="regform" class="register-form" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php"
+            method="post">
+
+
+            <div class="form-wrapper">
+
+                <div id="reg-title">
+
+
+                    <h1>Make a reservation</h1>
+
+                </div>
+
+
+                <!--   Username Email   -->
+
+                <div class="field">
+
+                    <div class="password-section">
+
+                        <div class="stack-label">
+                            <label for="fullname">Full name</label>
+                            <input type="text" id="fullname" name="fullname">
+                            <div class="field-error" id="fullname-error"></div>
+                        </div>
+
+                        <div class="stack-label">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email">
+                            <div class="field-error" id="email-error"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!--   Phone Number   -->
+
+
+
+                <div class="field">
+                    <label for="phonenumber">Phone Number</label>
+                    <input type="tel" id="phonenumber" name="phonenumber">
+                    <div class="field-error" id="phone-error"></div>
+
+                </div>
+
+
+                <!--   Restaurant List   -->
+
+                <div class="field">
+                    <label for="restaurants">Restaurant</label>
+                    <select id="restaurants" name="restaurants">
+                        <option value="">Select a restaurant</option>
+                    </select>
+
+                    <div class="field-error" id="restaurant-error"></div>
+
+                </div>
+
+                <!--  Date    -->
+
+                <div class="password-section">
+
+                    <div class="field">
+                        <label for="date">Start date:</label>
+
+                        <input type="date" id="date" name="date" />
+                        <div class="field-error" id="date-error"></div>
+
+
+                    </div>
+
+
+                    <!-- Time     -->
+                    <div class="field">
+
+                        <label for="time">Select a time:</label>
+                        <input type="time" id="time" name="time">
+                        <div class="field-error" id="time-error"></div>
+
+                    </div>
+
+
+
+                </div>
+
+                <!--    Number of guests  -->
+                <div class="field">
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" name="guests">
+
+                    <div class="field-error" id="guestnum-error"></div>
+
+
+
+                </div>
+
+                <!-- Special requests  -->
+
+                <div class="row">
+
+
+                    <label for="requests">Special Requests</label>
+
+                    <label class="small-label">Optional</label>
+
+
+                </div>
+                <textarea id="requests" name="requests" rows="4" cols="50"
+                    placeholder="e.g. window seat, dietary requirements, birthday celebration..."></textarea>
+
+
+
+                <!-- Deposit Amount  -->
+                <div class="field">
+
+
+
+                    <label for="guests">Deposit Amount</label>
+
+
+                    <input type="text" id="deposit" name="deposit" disabled>
+
+
+
+
+                </div>
+
+
+
+                <!-- Payment Method  -->
+                <div class="field">
+
+                    <p>Payment Method</p>
+                    <div class="option">
+                        <label for="online-payment"><input type="radio" id="online-payment" name="payment-option"
+                                value="online-payment" checked>Online Payment</label>
+                        <label for="voucher"><input type="radio" id="voucher" name="payment-option"
+                                value="voucher">Voucher</label>
+
+
+                    </div>
+
+                </div>
+
+                <!-- Voucher  -->
+
+                <div id="voucherSection">
+
+                    <div class="field">
+
+                        <label for="voucher">Voucher</label>
+                        <input type="text" id="voucher-input" name="voucher" maxlength="19"
+                            placeholder="XXXX-XXXX-XXXX-XXXX">
+                        <div class="field-error" id="voucher-error"></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Card details -->
+                <div id="payment-card">
+
+                    <div id="payment-title">
+                        <h2>Payment Details</h2>
+                    </div>
+
+
+                    <!-- Card type -->
+
+                    <div class="field">
+                        <p>Card Type</p>
+                        <div class="card-option">
+                            <label for="visa-master"><input type="radio" id="visa-master" name="card-type"
+                                    value="visa-master" checked>Visa/Mastercard</label>
+                            <label for="amex"><input type="radio" id="amex" name="card-type" value="amex">Amex</label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Card number -->
+
+                    <div class="field">
+                        <p>Card Number</p>
+                        <input type="text" id="card-number" name="card-number" placeholder="">
+                        <div class="field-error" id="cardnumber-error"></div>
+
+                    </div>
+
+
+
+                    <!-- Expiary -->
+
+
+
+                    <br>
+                    <div class="password-section">
+
+                        <div class="field">
+                            <label for="expiary">Expiary</label>
+
+                            <input type="text" id="expiary" name="expiary" maxlength="5" placeholder="12/34" />
+
+                            <div class="field-error" id="expiary-error"></div>
+
+                        </div>
+
+
+                        <!-- CVV -->
+
+
+                        <div class="field">
+
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" maxlength="4" placeholder="1234" />
+
+                            <div class="field-error" id="cvv-error"></div>
+
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+                <!-- Billing Email  -->
+
+                <div class="field">
+
+                    <div class="row">
+                        <label for="billing-email">Billing Email</label>
+
+                        <div class="email-checkbox">
+
+                            <label class="small-label" for="billing-email">Same as email?</label>
+
+                            <input type="checkbox" id="same-email" name="same-email" />
+
+                        </div>
+
+                    </div>
+
+
+
+                    <input type="text" id="billing-email" name="billing-emai" />
+
+                    <div class="field-error" id="billing-email-error"></div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+            <button id="submit-form" type="submit">Submit</button>
+        </form>
+
+
+
+
+
+    </main>
+
+
+
+    <!-- FOOTER  -->
+
+
+    <footer id="main-footer">
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 DineEasy. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+
+    <!-- SCRIPTS  -->
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
